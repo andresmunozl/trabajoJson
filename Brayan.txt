@@ -1,0 +1,76 @@
+{
+        "count": 6,
+        
+         "jugadores":
+
+             [
+                    {
+                            "id": 0001,
+                            "nombre": "ronaldo de asis moreira",
+                            "equipo": "Barcelona",
+                            "altura": "1.70",
+                            "valor ataque": 80,
+                            "valor defenza": 50,
+                            "pierna habil": derecha,
+                            "habilidad": [
+                                                   { "idhabilidad": jugador0001,
+                                                     "nombre": "Regateador"
+                                                   }
+                                                ]
+                           "habilidad oculta": [
+                                                               {
+                                                                  "idhabilidadoculta": jugador001,
+                                                                  "nombre": "capitan"
+                                                               }
+                                                          ]
+                           "posicion": [
+                                                               {
+                                                                  "idposicion": "posicion01",
+                                                                  "nombre": "volante 10"
+                                                               }
+
+                                                               {
+                                                                  "idposicion": "posicion02",
+                                                                  "nombre": "Extremo derecho"
+                                                               }
+
+                                                          ]
+                    }
+
+                    {
+                            "id": 0002,
+                            "nombre": "leonel Andres Messi",
+                            "equipo": "Inter Miami",
+                            "altura": "1.69",
+                            "valor ataque": 92,
+                            "valor defenza": 70,
+                            "pierna habil": Izquierda,
+                            "habilidad": [
+                                                   { "idhabilidad": jugador0002,
+                                                     "nombre": "Capitan"
+                                                   }
+                                                ]
+                           "habilidad oculta": [
+                                                               {
+                                                                  "idhabilidadoculta": jugador002,
+                                                                  "nombre": "regateador"
+                                                               }
+                                                          ]
+                           "posicion": [
+                                                               {
+                                                                  "idposicion": "posicion01",
+                                                                  "nombre": "volante 10"
+                                                               }
+
+                                                               {
+                                                                  "idposicion": "posicion02",
+                                                                  "nombre": "Extremo derecho"
+                                                               }
+
+                                                          ]
+                    }
+
+
+             ]
+}
+
