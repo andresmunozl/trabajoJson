@@ -1,0 +1,104 @@
+Angela Campos 
+
+
+{ "cantidad pokemones"  : 7, 
+
+
+"pokemones":[
+
+ {
+  "id":11,
+  "nombre": "caterpie",
+  "especial" : true,
+  "altura" :"0,3 m",
+  "valor ataque" : " 25  ",
+  "valor defensa" :   "  25",
+  "color": "  verde ",
+
+ "habilidades":[
+{
+  "id": 123,
+  "nombre": "polvo escudo",
+  "habilidad oculta":"fuga"
+
+ }
+
+],
+  
+
+"tipo elemento":[
+{
+  "id": 144,
+  "nombre": "bicho"
+  
+ }
+
+],
+
+
+"movimientos":[
+{
+  "daño": "13",
+  "tipo": "normal"
+  
+ }
+
+],
+
+
+}
+
+
+
+
+
+ {
+  "id":22,
+  "nombre": "metapod",
+  "especial" : true,
+  "altura" :"0,7 m",
+  "valor ataque" : " 30  ",
+  "valor defensa" :   "  35 ",
+  "color": "  verde ",
+
+ "habilidades":[
+{
+  "id": 333,
+  "nombre": "mudar",
+
+
+ }
+
+],
+  
+
+"tipo elemento":[
+{
+  "id": 678,
+  "nombre": "bicho"
+  
+ }
+
+],
+
+
+
+"movimientos":[
+{
+  "daño": "17",
+  "tipo": "normal"
+  
+ }
+
+],
+
+}
+
+
+
+]
+
+}
+
+
+Angela Campos 
