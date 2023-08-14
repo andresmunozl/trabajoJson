@@ -1,0 +1,49 @@
+[{
+	"cantidad": 3,
+	"descripcion": [{
+			"id": 1,
+			"nombre": "blissey",
+			"especialidad": "agua",
+			"altura": "70cm",
+			"valor_ataque": "1/5 estrellas",
+			"valor_defensa": "3.5/5 estrellas",
+			"color": "amarillo",
+			"habilidades": [{
+				"idhabilidad": 1,
+				"nombrehabilidad": "absorbe agua",
+				"tipo": [1, "agua"],
+				"especialidad": [1, "furia dragon"]
+			}]
+		},
+		{
+			"id": 2,
+			"nombre": "clefable",
+			"especialidad": "fuego",
+			"altura": "77cm",
+			"valor_ataque": "2/5 estrellas",
+			"valor_defensa": "3/5 estrellas",
+			"color": "verde",
+			"habilidades": [{
+				"idhabilidad": 1,
+				"nombrehabilidad": "absorbe fuego",
+				"tipo": [2, "fuego"],
+				"especialidad": [2, "furia dragon"]
+			}]
+		},
+		{
+			"id": 3,
+			"nombre": "comfley",
+			"especialidad": "electricidad",
+			"altura": "67cm",
+			"valor_ataque": "2/5 estrellas",
+			"valor_defensa": "2.5/5 estrellas",
+			"color": "azul",
+			"habilidades": [{
+				"idhabilidad": 1,
+				"nombrehabilidad": "absorbe electricidad",
+				"tipo": [3, "electricidad"],
+				"especialidad": [3, "furia dragon"]
+			}]
+		}
+	]
+}]
