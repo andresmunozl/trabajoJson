@@ -1,0 +1,83 @@
+
+atributos:
+cantidad total de pokemones, dentro de este un listado de cada pokemon
+
+pokemon: id, nombre, especial, altura, valorataque,valordefensa , color
+
+habilidad: id, nombre, tipos a los que la habilidad hace daño (agua fuego)
+ 
+tipos: id y nombre tipo
+
+movimientos especiales: daño y tipo
+
+
+Mundo Pokemon
+
+
+
+{	"cantidad": 2
+	"listaPokemons": [
+			{"id": 1,
+			"Nombre": "Poke Uno" 
+			"Especial": false,
+			"Altura": "1,72cm"
+			"ValorAtaque": "32",
+			"ValorDefensa": "50"
+			"Color": "Red" },
+
+
+				{Habilidad[
+				"Id": 1,
+				"Nombre Habilidad": "Acuática"]},
+
+										
+					{Tipo[
+					"Id": 1,
+					"NombreTipo":"Especialito"]},
+
+
+						{Movimientos[
+						"Daño": "200xp",
+						"TipoDaño": "Letal" ]},
+
+	{"id": 2,
+			"Nombre": "Poke Dos" 
+			"Especial": true,
+			"Altura": "1,22cm"
+			"ValorAtaque": "12",
+			"ValorDefensa": "45"
+			"Color": "Blue" },
+
+
+				{Habilidad[
+				"Id": 2,
+				"Nombre Habilidad": "Ignea"]},
+
+										
+					{Tipo[
+					"Id": 2,
+					"NombreTipo":"Ganador"]},
+
+
+						{Movimientos[
+						"Daño": "100xp",
+						"TipoDaño": "Demasiado Letal" ]}
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
