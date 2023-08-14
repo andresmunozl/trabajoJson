@@ -1,0 +1,91 @@
+/EJERCICIO 2/  
+Manuel Alejandro Solarte 
+2556678
+
+
+un atributo que tenga la cantidad
+pokemon= id, nombre , espcial, altura,valor de ataque, valor de defensa, color 
+habilidades= id y el nombre de la habilidad
+tipos= id, nombredeltipo
+movimientos especiales= daño y tipo de movivimientos
+
+
+{
+  "cantidad": 2,
+  "pokemones":  [{
+      "ID": 001,
+      "Nombre": "Bulbasaur",
+      "Especial": "Planta/Veneno",
+      "Altura": "0.7 m",
+      "Valor de Ataque": 49,
+      "Valor de Defensa": 49,
+      "Color": "Verde",
+      "Habilidades": [{
+          "ID": 1,
+          "Nombre de la Habilidad": "Espesura"
+        }],
+      "Tipos": [{
+          "ID": 1,
+          "Nombre del Tipo": "Planta"
+        },
+ {
+          "ID": 2,
+          "Nombre del Tipo": "Veneno"
+        }],
+
+      "Movimientos Especiales": [{
+          "Daño": 65,
+          "Tipo de Movimiento": "Planta"
+        }]},
+
+    {
+      "ID": 025,
+      "Nombre": "Pikachu",
+      "Especial": "Eléctrico",
+      "Altura": "0.4 m",
+      "Valor de Ataque": 55,
+      "Valor de Defensa": 40,
+      "Color": "Amarillo",
+      "Habilidades": [{
+
+          "ID": 2,
+          "Nombre de la Habilidad": "Electricidad Estática"
+        }],
+
+      "Tipos": [{
+          "ID": 3,
+          "Nombre del Tipo": "Eléctrico"
+        }],
+
+      "Movimientos Especiales": [{
+          "Daño": 60,
+          "Tipo de Movimiento": "Eléctrico"
+        },
+     {
+          "Daño": 70,
+          "Tipo de Movimiento": "Normal"
+      		  }]}]};
+
+
+
+
+		
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
