@@ -1,0 +1,128 @@
+
+nicole galindez
+
+{
+	"count": 7,
+	"pokemones":
+	[
+		{
+			"id": 0001 ,
+			"nombre": "bulbasaur",
+			"especial":  true,
+			"altura": "0,7 m",
+			"valor atake" : "49  ",
+			"valor defensa": " 49 ",
+			"color": " verde ",
+			"habilidad": [     {
+					         "id": "0001.h1",
+						 "nombre": " espesura" 
+				             }	
+					] ,
+
+
+
+			"habilidad oculta": [     {
+					         "id": "0001.ho1",
+						 "nombre": " clorofila" 
+				                  }	
+				       	     ] ,
+
+
+
+
+			"tipo elemento": [     {
+					         "id": "0001.e#2",
+						 "nombre": " planta y veneno" 
+				             }
+					] ,
+
+
+			"movimientos": [     {
+						"id": "0001.m1
+					         "daño ": "12",
+						 "nombre": " paclaje" ,
+						 "tipo": " normal" 
+				             }
+
+					     {
+						"id": "0001.m2
+					         "daño ": "7",
+						 "nombre": " latigo cepa" ,
+						 "tipo": " planta" 
+				             }
+
+
+					] ,
+
+
+		}
+
+// segundo pokemon
+
+		{
+
+			"id": 0483 ,
+			"nombre": "dialga",
+			"especial":  true,
+			"altura": "0,7 m (FO) y 5,4m (D)  ",
+			"valor atake" : "120 ",
+			"valor defensa": " 120 ",
+			"color": " blanco ",
+
+			"habilidad": [     {
+					         "id": "0483.h1",
+						 "nombre": " presion" 
+				             }	
+					] ,
+
+
+
+			"habilidad oculta": [     {
+					         "id": "0483.ho1",
+						 "nombre": " telepatia" 
+				                  }	
+				       	     ] ,
+
+
+
+
+			"tipo ": [     {
+					         "id": "0483.e#2",
+						 "nombre": " acero y dragon" 
+				             }
+					] ,
+
+
+			"movimientos": [      
+					      {
+						"id": "0483.m1
+					         "daño ": "150",
+						 "nombre": " Represión Metal Metal Burst" ,
+						 "tipo": null
+				                }
+
+					    	 {
+						 "id": "0483.m2
+					         "daño ": "golpe critico",
+						 "nombre": " Cuchillada Slash" ,
+						 "tipo": null
+				           	  }
+
+
+					] ,
+
+
+		}
+
+
+
+
+
+
+	]
+
+
+}
+
+
+nicole galindez
