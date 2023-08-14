@@ -1,0 +1,66 @@
+"mundoPokemon" : {
+	"Cantidad" : 3,
+		"pokemones" : [
+			{"id": 01,
+			"nombre" : "pikachu",
+			"especial" : false,
+			"altura" : 41,
+			"ataque" : 45,
+			"defensa" : 38,
+			"color" : "amarillo",
+			"habilidades" : [
+				"id": 201,
+				"nombre_habilidad" : "cola de pala",
+				"ataque_critico" : "agua"
+			],
+			"tipo" : [
+				"id" : 301,
+				"tipo_elemento" : "electrico"
+			],
+			"movimiento_especial" : [
+				"daño" : 100,
+				"tipo" "electrico"
+			]},
+		{"id": 02,
+			"nombre" : "Arqueus",
+			"especial" : true,
+			"altura" : 3,2,
+			"ataque" : 500,
+			"defensa" : 800,
+			"color" : "blanco",
+			"habilidades" : [
+				"id": 202,
+				"nombre_habilidad" : "palazo celestial",
+				"ataque_critico" : "agua"
+			],
+			"tipo" : [
+				"id" : 302,
+				"tipo_elemento" : "electrico"
+			],
+			"movimiento_especial" : [
+				"daño" : 150,
+				"tipo" "electrico"
+			]},
+		{"id": 03,
+			"nombre" : "bolbasor",
+			"especial" : false,
+			"altura" : 3,2,
+			"ataque" : 41,
+			"defensa" : 31,
+			"color" : "azul",
+			"habilidades" : [
+				"id": 203,
+				"nombre_habilidad" : "cilantro salvaje",
+				"ataque_critico" : "tierra"
+			],
+			"tipo" : [
+				"id" : 303,
+				"tipo_elemento" : "planta"
+			],
+			"movimiento_especial" : [
+				"daño" : 89,
+				"tipo" "planta"
+			]}
+		
+	]
+}
