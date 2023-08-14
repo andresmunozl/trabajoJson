@@ -5,25 +5,49 @@ habilidades =  id , nombre, a que tipo de pockemon le hace mas daño, de cada ti
  movimientos especiales = daño, tipo;
 
 {
-	'cantidad': 2,
-	'listapokemons' : [{'id':1,
-'nom':'bulbasaur',
-'altura':'0,7m,
-valorA':49.693,
-'valorD':49.661,
-'color':'Verde',
-'habilidad': [{'id':01,'nombreA':'Espesura'}],
-'tipo':[{'id':001,'nompreT':'planta'}],
-'movimientosE':[{'daño':5000,'tipoD':'tierra'}]},
+	"cantidad": 2,
+	"listapokemons": [{
+			"id": 1,
+			"nom": "bulbasaur",
+			"altura": "0,7m",
+			"valorA": 49.693,
+			"valorD": 49.661,
+			"color": "Verde",
+			"habilidad": [{
+				"id": 1,
+				"nombreA": "Espesura"
+			}],
+			"tipo": [{
+				"id": 1,
+				"nompreT": "planta"
+			}],
+			"movimientosE": [{
+				"daño": 5000,
+				"tipoD": "tierra"
+			}]
+		},
 
-{'id':2,'nom':'Charizard',
-'altura':'1,7m',
-'valorA':223,
-'valorD':173,
-'color':'Naranja'
-'habilidad': [{'id':02,'nombreA':mar llamas'}],
-'tipo'}:[{'id':002,'nompreT':'Fuego'}],
-'movimientosE':[{'daño':10000,'tipoD':'Fuego'}]}]
+		{
+			"id": 2,
+			"nom": "Charizard",
+			"altura": "1,7m",
+			"valorA": 223,
+			"valorD": 173,
+			"color": "Naranja",
+			"habilidad": [{
+				"id": 2,
+				"nombreA": "mar llamas"
+			}],
+			"tipo": [{
+				"id": 2,
+				"nompreT": "Fuego"
+			}],
+			"movimientosE": [{
+				"daño": 10000,
+				"tipoD": "Fuego"
+			}]
+		}
+	]
 
 }
 

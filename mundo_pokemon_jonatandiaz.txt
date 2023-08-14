@@ -1,0 +1,42 @@
+objeto grande
+pokemon(id nombre especial ataque valor defensa) tipo de debilidad+1 (tipos de materia(id))movimeinto especiales+1(daño,tipo)
+{
+  "mundoPokemon": {
+  "pokemon1": {
+      "id": 3,
+      "nombre": "Squirtle",
+      "especial": false,
+      "altura": 0.5,
+      "nivelAtaque": 50,
+      "nivelDefensa": 70,
+      "color": "azul",
+      "habilidades": [
+        { "id": 5, "nombre": "Pistola Agua", "tiposAfectados": ["fuego", "roca", "tierra"] },
+        { "id": 6, "nombre": "Hidropulso", "tiposAfectados": ["fuego", "roca", "tierra"] }
+      ],
+      "tipo": { "id": 3, "nombre": "Agua" },
+      "movimientosEspeciales": [
+        { "id": 5, "danio": 80, "tipo": "Agua" },
+        { "id": 6, "danio": 65, "tipo": "Agua" }
+      ]
+    },
+    "pokemon2": {
+      "id": 4,
+      "nombre": "Bulbasaur",
+      "especial": false,
+      "altura": 0.7,
+      "nivelAtaque": 55,
+      "nivelDefensa": 55,
+      "color": "verde",
+      "habilidades": [
+        { "id": 7, "nombre": "Látigo Cepa", "tiposAfectados": ["agua", "roca", "tierra"] },
+        { "id": 8, "nombre": "Rayo Solar", "tiposAfectados": ["agua", "roca", "tierra"] }
+      ],
+      "tipo": { "id": 4, "nombre": "Planta" },
+      "movimientosEspeciales": [
+        { "id": 7, "danio": 75, "tipo": "Planta" },
+        { "id": 8, "danio": 110, "tipo": "Planta" }
+      ]
+    }
+  }
+}
