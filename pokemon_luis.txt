@@ -1,0 +1,59 @@
+{
+	"cantidad":2,
+	"pokemons":[
+
+
+		{
+
+			"id": "p1",
+			"nombre": "pop",
+			"especialidad": "agua",
+			"altura": "2.1m",
+			"valorAtaque": "250",
+			"valorDefensa": "600",
+			"color": "rojo",
+			"habilidades": [{
+				"idHavilidad": 0,
+				"nombreHbilida": "Absorbe fuego"
+            }] ,
+
+			"tipo":[{
+				"idTipo": "a1",
+				"nombreTipo": "agua"
+			}],
+		
+			"mobimientosEspeciales": [{
+				"daño": 500,
+				"tipo": "agua"
+            }]
+		},
+
+		{
+
+			"id": "p2",
+			"nombre": "pikachu",
+			"especialidad": "Energia",
+			"altura": "2m",
+			"valorAtaque": "300",
+			"valorDefensa": "310",
+			"color": "amarillo",
+			"habilidades": [{
+				"idHavilidad": 1,
+				"nombreHbilida": "Tierra Cortante"
+            }],
+
+
+		    "tipo":[{
+			    "idTipo": "a2",
+				"nombreTipo":"energia"
+            }],
+		
+		"mobimientosEspeciales": [{
+			"daño": 1000,
+			"tipo": "tierra"
+        }]
+        }
+        
+    ]
+		
+}
