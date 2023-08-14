@@ -1,57 +1,92 @@
 //pokemon,lista con la cantidad de pokemon con un listado dentro de cada uno de ellos,(id,nombre,especial,altura,valor de ataque y defensa,color,)habilidades,(id,nombre,tipo),tipo(id,nombre),movimientos especiales(daño,tipo)
 
 
-"mundoPokemon":{
-
-"Cantidad":3
-"Pokemones":[ 
-               { "id":1,
-                  "nombre":Pikachu,
-                  "especial":false,
-                   "altura":41,
-                    "valorAtaque":50000,
-                    "defensa":50000,
-                     "color":"amarillo"
-                      "habilidades":[
-                                     "id":0,
-                                     "nombreHabilidad":"cola de hierro",
-                                     "dañoCritico":"agua"
-                                                         ], 
-                      "tipo":[1,"electrico"],
-                      "movimientosEspeciales":[01,"impact trueno"],
-},
-
-
-
-{ "id":2,
- "nombre":"Charmander",
-"especial":false,
- "altura":61,
-"valorAtaque":80000,
-"defensa":50000,
-"color":"Naranja"
-    "habilidades":[
-                    "id":1,
-                     "nombreHabilidad":"gruñido",
-                     "dañoCritico":"planta"
-                                                         ], 
-                      "tipo":[2,"fuego"],
-                      "movimientosEspeciales":[02,"Furia Dragón Dragon Rage"],
-},
-
-{ "id":3,
- "nombre":"Mewtwo",
-"especial":true,
- "altura":201,
-"valorAtaque":100000,
-"defensa":100000,
-"color":"Blanco"
- "habilidades":[
-                    "id":2,
-                     "nombreHabilidad":"Velo Sagrado Safeguard",
-                     "dañoCritico":"Lucha"
-                                                         ], 
-                      "tipo":[3,"Psiquico"],
-                      "movimientosEspeciales":[03,"Smash Final"],          },
-]
-      }
+{
+	"Cantidad": 3,
+	"Pokemones": [
+		{
+			"id": 1,
+			"nombre": "Pikachu",
+			"especial": false,
+			"altura": 41,
+			"valorAtaque": 50000,
+			"defensa": 50000,
+			"color": "amarillo",
+			"habilidades": [
+				{
+					"id": 0,
+					"nombreHabilidad": "cola de hierro",
+					"dañoCritico": "agua"
+				}
+			],
+			"tipo": [
+				{
+					"id": 1,
+					"tipo": "eléctrico"
+				}
+			],
+			"movimientosEspeciales": [
+				{
+					"id": 1,
+					"movimiento": "impacto trueno"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"nombre": "Charmander",
+			"especial": false,
+			"altura": 61,
+			"valorAtaque": 80000,
+			"defensa": 50000,
+			"color": "naranja",
+			"habilidades": [
+				{
+					"id": 1,
+					"nombreHabilidad": "gruñido",
+					"dañoCritico": "planta"
+				}
+			],
+			"tipo": [
+				{
+					"id": 2,
+					"tipo": "fuego"
+				}
+			],
+			"movimientosEspeciales": [
+				{
+					"id": 2,
+					"movimiento": "Furia Dragón Dragon Rage"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"nombre": "Mewtwo",
+			"especial": true,
+			"altura": 201,
+			"valorAtaque": 100000,
+			"defensa": 100000,
+			"color": "blanco",
+			"habilidades": [
+				{
+					"id": 2,
+					"nombreHabilidad": "Velo Sagrado Safeguard",
+					"dañoCritico": "lucha"
+				}
+			],
+			"tipo": [
+				{
+					"id": 3,
+					"tipo": "psíquico"
+				}
+			],
+			"movimientosEspeciales": [
+				{
+					"id": 3,
+					"movimiento": "Smash Final"
+				}
+			]
+		}
+	]
+}
