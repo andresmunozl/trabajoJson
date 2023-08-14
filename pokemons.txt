@@ -1,0 +1,31 @@
+
+
+({
+  cantidad: "2",
+  pokemon_lista: ["Lugia", "Palkia"]
+});
+
+([
+  {
+    _id: "133345",
+    nombre: "Lugia",
+    tipo: "psiquico",
+    ataque: "5",
+    defensa: "5",
+    movimientos_especiales: ["cola_dragon"],
+    color: "blanco",
+    especial: "normal",
+    fuerte_contra: ["Electricos", "tipo hierba","lucador"]
+  },
+  {
+    _id: "78988",
+    nombre: "Palkia",
+    tipo: "agua",
+    ataque: "5",
+    defensa: "5",
+    movimientos_especiales: ["dragon_aliento"],
+    color: "morado",
+    especial: "shiny",
+    fuerte_contra: ["Fuego","viento","roca"]
+  }
+]);
