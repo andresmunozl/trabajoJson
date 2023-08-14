@@ -1,0 +1,91 @@
+Pokemon
+
+Listado de del mundo de los pokemon
+
+
+id
+nombre
+es especial?
+Altura
+Valor ataque 
+Valor defensa
+Color
+
+	habilidades
+	id
+	nombre
+	A que tipo de pokemón le hace mas daño
+
+
+
+	Tipos (agua, aire, tierra)
+	id
+	Nombre
+
+
+	Movimientos epeciales
+	Daño
+	Tipo
+
+{
+'Cantidad': 2,
+'Pokemons':
+	[
+	{
+	'id': 01,
+	'Nombre': 'Charmeleon',
+	'Es especial': 'Yes',
+	'Altura': '2m',
+	'Valor de ataque': 5000,
+	'Valor de defensa': 10000,
+	'Color': 'Palo de rosa',
+	'Habilidades':[
+		{
+		'id': 01,
+		'Nombre': 'Golpe mano izquierda',
+		'A que tipo de pokemón le hace mas daño': 'Tierra'
+		},
+		'id': 02,
+		'Nombre': 'Gruñido',
+		'A que tipo de pokemón le hace mas daño': 'Aire'
+		}
+		],
+	'Tipo':	{
+		'id': 01,
+		'Nombre': 'Tierra',
+		},
+	'Movimientos especiales':{
+		'Daño': 1500,
+		'Tipo': 'Fuego',
+		},
+	},
+	'id': 02,
+	'Nombre': 'Picachú',
+	'Es especial': 'Yes',
+	'Altura': '1.60m',
+	'Valor de ataque': 8000,
+	'Valor de defensa': 12000,
+	'Color': 'Amarillo',
+	'Habilidades':[
+		{
+		'id': 01,
+		'Nombre': 'Grito',
+		'A que tipo de pokemón le hace mas daño': 'Aire'
+		},
+		'id': 02,
+		'Nombre': 'Rayo laser',
+		'A que tipo de pokemón le hace mas daño': 'Tierra'
+		}
+		],
+	'Tipo':	{
+		'id': 01,
+		'Nombre': 'Tierra',
+		},
+	'Movimientos especiales':{
+		'Daño': 5000,
+		'Tipo': 'Fuego',
+	{
+
+	}
+	]
+}
