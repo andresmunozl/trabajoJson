@@ -44,7 +44,7 @@
 
 
 		    "tipo":[{
-			    "idTipo": "a1",
+			    "idTipo": "a2",
 				"nombreTipo":"energia"
             }],
 		
