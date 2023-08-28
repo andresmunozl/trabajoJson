@@ -1,0 +1,240 @@
+1. Crear una base de Datos llamada Biblioteca.
+
+use Biblioteca
+switched to db Biblioteca
+
+2. Mostrar la base de datos creada.
+
+ show dbs
+Biblioteca  0.000GB
+admin       0.000GB
+config      0.000GB
+local       0.000GB
+rpm         0.000GB
+
+3. Mostrar en que base de datos se encuentra conectado.
+ db
+Biblioteca
+
+4. Crear una colección libro
+
+db.createCollection("libro")
+{ "ok" : 1 }
+
+5. Inserta 1 registro
+
+db.libros.insert({ nombre: 'Aprenda Python', autor: 'Mario Molina', editoriales: ['Planeta'] })
+WriteResult({ "nInserted" : 1 })
+
+6. Mostrar la base de datos creada
+
+show dbs
+Biblioteca  0.000GB
+admin       0.000GB
+config      0.000GB
+local       0.000GB
+rpm         0.000GB
+
+7. Insertar los siguientes registros en la colección libros
+
+ db.libros.insertMany([  {         "nombre" : "Aprenda Python",         "autor" : "Mario Molina",         "editoriales" : [                 "Planeta"         ] }, {                  "nombre" : "Aprenda PHP",         "autor" : "Mario Molina",         "editorial" : [                 "Planeta"         ] }, {                  "nombre" : "Java en 10 minutos",         "autor" : " Barros Sergio",         "editorial" : [                 "Planeta, Siglo XXI"         ] }, {                  "nombre" : "Dummies Android",         "autor" : " Julián Lujan",         "editorial" : [                 "Planeta",                 "Siglo XXI"         ] }, {                  "nombre" : "Uml",         "autor" : "Gosh",         "editorial" : [                 "Planeta"         ] }, {         "nombre" : "Java",         "autor" : " Joyanes",         "editorial" : [                 "Planeta"         ] }, {         "nombre" : " Satanas",         "autor" : " Mendoza",         "editorial" : [                 "Planeta"         ] } ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64ed0b63242d39f357068e49"),
+                ObjectId("64ed0b63242d39f357068e4a"),
+                ObjectId("64ed0b63242d39f357068e4b"),
+                ObjectId("64ed0b63242d39f357068e4c"),
+                ObjectId("64ed0b63242d39f357068e4d"),
+                ObjectId("64ed0b63242d39f357068e4e"),
+                ObjectId("64ed0b63242d39f357068e4f")
+        ]
+}
+
+8. Agregar a la colección 3 libros más de su preferencia
+
+db.libros.insertMany([{"nombre":"la odisea","autor":"homero","editorial":"la esfera de los libros"},{"nombre":"la iliada","autor":"homero","editorial":"feltrinelli"},{"nombre":"el principito","autor":"Antoine de Saint-Exupery","editorial":"Gran Travesia"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64ed17e7242d39f357068e50"),
+                ObjectId("64ed17e7242d39f357068e51"),
+                ObjectId("64ed17e7242d39f357068e52")
+        ]
+}
+
+9. Listar todos los libros
+
+db.libros.find()
+{ "_id" : ObjectId("64ed0b63242d39f357068e49"), "nombre" : "Aprenda Python", "autor" : "Mario Molina", "editoriales" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4a"), "nombre" : "Aprenda PHP", "autor" : "Mario Molina", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4b"), "nombre" : "Java en 10 minutos", "autor" : " Barros Sergio", "editorial" : [ "Planeta, Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4c"), "nombre" : "Dummies Android", "autor" : " Julián Lujan", "editorial" : [ "Planeta", "Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4d"), "nombre" : "Uml", "autor" : "Gosh", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4e"), "nombre" : "Java", "autor" : " Joyanes", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4f"), "nombre" : " Satanas", "autor" : " Mendoza", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed17e7242d39f357068e50"), "nombre" : "la odisea", "autor" : "homero", "editorial" : "la esfera de los libros" }
+{ "_id" : ObjectId("64ed17e7242d39f357068e51"), "nombre" : "la iliada", "autor" : "homero", "editorial" : "feltrinelli" }
+{ "_id" : ObjectId("64ed17e7242d39f357068e52"), "nombre" : "el principito", "autor" : "Antoine de Saint-Exupery", "editorial" : "Gran Travesia" }
+
+10. Mostrar todos los libros en formato Json
+
+ db.libros.find().pretty()
+{
+        "_id" : ObjectId("64ed0b63242d39f357068e49"),
+        "nombre" : "Aprenda Python",
+        "autor" : "Mario Molina",
+        "editoriales" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b63242d39f357068e4a"),
+        "nombre" : "Aprenda PHP",
+        "autor" : "Mario Molina",
+        "editorial" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b63242d39f357068e4b"),
+        "nombre" : "Java en 10 minutos",
+        "autor" : " Barros Sergio",
+        "editorial" : [
+                "Planeta, Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b63242d39f357068e4c"),
+        "nombre" : "Dummies Android",
+        "autor" : " Julián Lujan",
+        "editorial" : [
+                "Planeta",
+                "Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b63242d39f357068e4d"),
+        "nombre" : "Uml",
+        "autor" : "Gosh",
+        "editorial" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b63242d39f357068e4e"),
+        "nombre" : "Java",
+        "autor" : " Joyanes",
+        "editorial" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b63242d39f357068e4f"),
+        "nombre" : " Satanas",
+        "autor" : " Mendoza",
+        "editorial" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed17e7242d39f357068e50"),
+        "nombre" : "la odisea",
+        "autor" : "homero",
+        "editorial" : "la esfera de los libros"
+}
+{
+        "_id" : ObjectId("64ed17e7242d39f357068e51"),
+        "nombre" : "la iliada",
+        "autor" : "homero",
+        "editorial" : "feltrinelli"
+}
+{
+        "_id" : ObjectId("64ed17e7242d39f357068e52"),
+        "nombre" : "el principito",
+        "autor" : "Antoine de Saint-Exupery",
+        "editorial" : "Gran Travesia"
+}
+
+11. Eliminar el libro que tenga por nombre Satanas
+
+ db.libros.deleteOne({ "nombre" : " Satanas"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+12. Listar los libros.
+
+db.libros.find()
+{ "_id" : ObjectId("64ed0b63242d39f357068e49"), "nombre" : "Aprenda Python", "autor" : "Mario Molina", "editoriales" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4a"), "nombre" : "Aprenda PHP", "autor" : "Mario Molina", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4b"), "nombre" : "Java en 10 minutos", "autor" : " Barros Sergio", "editorial" : [ "Planeta, Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4c"), "nombre" : "Dummies Android", "autor" : " Julián Lujan", "editorial" : [ "Planeta", "Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4d"), "nombre" : "Uml", "autor" : "Gosh", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4e"), "nombre" : "Java", "autor" : " Joyanes", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed17e7242d39f357068e50"), "nombre" : "la odisea", "autor" : "homero", "editorial" : "la esfera de los libros" }
+{ "_id" : ObjectId("64ed17e7242d39f357068e51"), "nombre" : "la iliada", "autor" : "homero", "editorial" : "feltrinelli" }
+{ "_id" : ObjectId("64ed17e7242d39f357068e52"), "nombre" : "el principito", "autor" : "Antoine de Saint-Exupery", "editorial" : "Gran Travesia" }
+
+13. Listar solo 3 libros
+
+db.libros.find().limit(3)
+{ "_id" : ObjectId("64ed0b63242d39f357068e49"), "nombre" : "Aprenda Python", "autor" : "Mario Molina", "editoriales" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4a"), "nombre" : "Aprenda PHP", "autor" : "Mario Molina", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4b"), "nombre" : "Java en 10 minutos", "autor" : " Barros Sergio", "editorial" : [ "Planeta, Siglo XXI" ] }
+
+14. Listar los libros en forma ascendente por nombre
+
+db.libros.find().sort({"nombre":1})
+{ "_id" : ObjectId("64ed0b63242d39f357068e4a"), "nombre" : "Aprenda PHP", "autor" : "Mario Molina", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e49"), "nombre" : "Aprenda Python", "autor" : "Mario Molina", "editoriales" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4c"), "nombre" : "Dummies Android", "autor" : " Julián Lujan", "editorial" : [ "Planeta", "Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4e"), "nombre" : "Java", "autor" : " Joyanes", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4b"), "nombre" : "Java en 10 minutos", "autor" : " Barros Sergio", "editorial" : [ "Planeta, Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4d"), "nombre" : "Uml", "autor" : "Gosh", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed17e7242d39f357068e52"), "nombre" : "el principito", "autor" : "Antoine de Saint-Exupery", "editorial" : "Gran Travesia" }
+{ "_id" : ObjectId("64ed17e7242d39f357068e51"), "nombre" : "la iliada", "autor" : "homero", "editorial" : "feltrinelli" }
+{ "_id" : ObjectId("64ed17e7242d39f357068e50"), "nombre" : "la odisea", "autor" : "homero", "editorial" : "la esfera de los libros" }
+
+15. Listar los libros en forma descendente por editorial
+
+ db.libros.find().sort({"editorial":-1})
+{ "_id" : ObjectId("64ed17e7242d39f357068e50"), "nombre" : "la odisea", "autor" : "homero", "editorial" : "la esfera de los libros" }
+{ "_id" : ObjectId("64ed17e7242d39f357068e51"), "nombre" : "la iliada", "autor" : "homero", "editorial" : "feltrinelli" }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4c"), "nombre" : "Dummies Android", "autor" : " Julián Lujan", "editorial" : [ "Planeta", "Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4b"), "nombre" : "Java en 10 minutos", "autor" : " Barros Sergio", "editorial" : [ "Planeta, Siglo XXI" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4a"), "nombre" : "Aprenda PHP", "autor" : "Mario Molina", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4d"), "nombre" : "Uml", "autor" : "Gosh", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b63242d39f357068e4e"), "nombre" : "Java", "autor" : " Joyanes", "editorial" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed17e7242d39f357068e52"), "nombre" : "el principito", "autor" : "Antoine de Saint-Exupery", "editorial" : "Gran Travesia" }
+{ "_id" : ObjectId("64ed0b63242d39f357068e49"), "nombre" : "Aprenda Python", "autor" : "Mario Molina", "editoriales" : [ "Planeta" ] }
+
+16. Crear una nueva colección llamada ciudades
+
+db.createCollection("ciudades")
+{ "ok" : 1 }
+
+17. Insertar 3 registro con el nombre de la ciudad y su código
+
+db.ciudades.insertMany([{"nombre":"popayan","cod":00011},{"nombre":"Cali","cod":00022},{"nombre":"Bogota","cod":00033}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64ed1bf7242d39f357068e53"),
+                ObjectId("64ed1bf7242d39f357068e54"),
+                ObjectId("64ed1bf7242d39f357068e55")
+        ]
+}
+
+18. Eliminar la colección
+
+ db.ciudades.drop()
+true
+
+
+
+
+
+
+
+
+
+
