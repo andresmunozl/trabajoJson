@@ -1,0 +1,377 @@
+1) Crear una base de datos llamada Biblioteca
+> use Biblioteca
+switched to db Biblioteca
+
+2) Mostrar la base de datos creada
+> show dbs
+admin       0.000GB
+config      0.000GB
+empleados   0.000GB
+local       0.000GB
+wilmar      0.000GB
+
+3) Mostrar en que base de datos se encuentra conectado
+> db
+Biblioteca
+
+4) Crar una coleccion Libro
+> db.createCollection("Libro")
+{ "ok" : 1 }
+
+5) insertar 1 registro
+> db.Libro.insert({"nombre": "Aprenda python", "autor": "Mario Molina", "editoriales": ["Planeta"]})
+WriteResult({ "nInserted" : 1 })
+
+6)Mostrar la base de datos creada
+> show dbs
+Biblioteca  0.000GB
+admin       0.000GB
+config      0.000GB
+empleados   0.000GB
+local       0.000GB
+wilmar      0.000GB
+
+7) Insertar los siguientes registros en la coleccion de libros
+> db.Libro.insertMany([{"nombre": "Java en 10 minutos", "autor": "Barros Sergios", "editoriales": ["Planeta,Siglo XXI"]}, {"nombre": "Dummies Android", "autor": "Julian Lujan", "editor": ["Planeta,Siglo XXI"]},{"nombre": "Uml", "autor": "Gosh", "editor": ["Planeta"]},{"nombre": "Java", "autor": "Joyanes", "editor": "[Planeta]"}, {"nombre":"Satanas", "autor": "Mendoza", "editor": ["Planeta"]}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64ed09f8d5961d0b5ec3d67a"),
+                ObjectId("64ed09f8d5961d0b5ec3d67b"),
+                ObjectId("64ed09f8d5961d0b5ec3d67c"),
+                ObjectId("64ed09f8d5961d0b5ec3d67d"),
+                ObjectId("64ed09f8d5961d0b5ec3d67e")
+        ]
+}
+
+8) Agregar a la coleccion 3 libros mas de su preferencia
+
+> db.Libro.insertMany([{"nombre": "Aprendiendo Mongo", "autor": "Andres", "editoriales": ["Sena, Biblioteca"]}, {"nombre": "Mi primer Discord", "autor": "Wilman Rodriguez", "editor": ["Libros cali"]},{"nombre": "Js para novatos", "autor":"Javier Lozada", "editor": ["Semilleros2"]}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64ed0b44d5961d0b5ec3d67f"),
+                ObjectId("64ed0b44d5961d0b5ec3d680"),
+                ObjectId("64ed0b44d5961d0b5ec3d681")
+        ]
+}
+
+9) Listar todo el contenido de libros
+
+> db.Libro.find()
+{ "_id" : ObjectId("64ed083ed5961d0b5ec3d679"), "nombre" : "Aprenda python", "autor" : "Mario Molina", "editoriales" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed09f8d5961d0b5ec3d67a"), "nombre" : "Java en 10 minutos", "autor" : "Barros Sergios", "editoriales" : [ "Planeta,Siglo XXI" ] }
+{ "_id" : ObjectId("64ed09f8d5961d0b5ec3d67b"), "nombre" : "Dummies Android", "autor" : "Julian Lujan", "editor" : [ "Planeta,Siglo XXI" ] }
+{ "_id" : ObjectId("64ed09f8d5961d0b5ec3d67c"), "nombre" : "Uml", "autor" : "Gosh", "editor" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed09f8d5961d0b5ec3d67d"), "nombre" : "Java", "autor" : "Joyanes", "editor" : "[Planeta]" }
+{ "_id" : ObjectId("64ed09f8d5961d0b5ec3d67e"), "nombre" : "Satanas", "autor" : "Mendoza", "editor" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed0b44d5961d0b5ec3d67f"), "nombre" : "Aprendiendo Mongo", "autor" : "Andres", "editoriales" : [ "Sena, Biblioteca" ] }
+{ "_id" : ObjectId("64ed0b44d5961d0b5ec3d680"), "nombre" : "Mi primer Discord", "autor" : "Wilman Rodriguez", "editor" : [ "Libros cali" ] }
+{ "_id" : ObjectId("64ed0b44d5961d0b5ec3d681"), "nombre" : "Js para novatos", "autor" : "Javier Lozada", "editor" : [ "Semilleros2" ] }
+
+
+10) Mostrar todos los libros en formato Json
+> db.Libro.find().pretty()
+{
+        "_id" : ObjectId("64ed083ed5961d0b5ec3d679"),
+        "nombre" : "Aprenda python",
+        "autor" : "Mario Molina",
+        "editoriales" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67a"),
+        "nombre" : "Java en 10 minutos",
+        "autor" : "Barros Sergios",
+        "editoriales" : [
+                "Planeta,Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67b"),
+        "nombre" : "Dummies Android",
+        "autor" : "Julian Lujan",
+        "editor" : [
+                "Planeta,Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67c"),
+        "nombre" : "Uml",
+        "autor" : "Gosh",
+        "editor" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67d"),
+        "nombre" : "Java",
+        "autor" : "Joyanes",
+        "editor" : "[Planeta]"
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67e"),
+        "nombre" : "Satanas",
+        "autor" : "Mendoza",
+        "editor" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d67f"),
+        "nombre" : "Aprendiendo Mongo",
+        "autor" : "Andres",
+        "editoriales" : [
+                "Sena, Biblioteca"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d680"),
+        "nombre" : "Mi primer Discord",
+        "autor" : "Wilman Rodriguez",
+        "editor" : [
+                "Libros cali"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d681"),
+        "nombre" : "Js para novatos",
+        "autor" : "Javier Lozada",
+        "editor" : [
+                "Semilleros2"
+        ]
+}
+
+11) Eliminar el libro que contega el nombre Satanas
+
+> db.Libro.remove({nombre: "Satanas"})
+WriteResult({ "nRemoved" : 1 })
+
+12) Listar los libros
+ db.Libro.find().pretty()
+{
+        "_id" : ObjectId("64ed083ed5961d0b5ec3d679"),
+        "nombre" : "Aprenda python",
+        "autor" : "Mario Molina",
+        "editoriales" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67a"),
+        "nombre" : "Java en 10 minutos",
+        "autor" : "Barros Sergios",
+        "editoriales" : [
+                "Planeta,Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67b"),
+        "nombre" : "Dummies Android",
+        "autor" : "Julian Lujan",
+        "editor" : [
+                "Planeta,Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67c"),
+        "nombre" : "Uml",
+        "autor" : "Gosh",
+        "editor" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67d"),
+        "nombre" : "Java",
+        "autor" : "Joyanes",
+        "editor" : "[Planeta]"
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d67f"),
+        "nombre" : "Aprendiendo Mongo",
+        "autor" : "Andres",
+        "editoriales" : [
+                "Sena, Biblioteca"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d680"),
+        "nombre" : "Mi primer Discord",
+        "autor" : "Wilman Rodriguez",
+        "editor" : [
+                "Libros cali"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d681"),
+        "nombre" : "Js para novatos",
+        "autor" : "Javier Lozada",
+        "editor" : [
+                "Semilleros2"
+        ]
+}
+
+13) Listar solo 3 libros
+> db.Libro.find().limit(3)
+{ "_id" : ObjectId("64ed083ed5961d0b5ec3d679"), "nombre" : "Aprenda python", "autor" : "Mario Molina", "editoriales" : [ "Planeta" ] }
+{ "_id" : ObjectId("64ed09f8d5961d0b5ec3d67a"), "nombre" : "Java en 10 minutos", "autor" : "Barros Sergios", "editoriales" : [ "Planeta,Siglo XXI" ] }
+{ "_id" : ObjectId("64ed09f8d5961d0b5ec3d67b"), "nombre" : "Dummies Android", "autor" : "Julian Lujan", "editor" : [ "Planeta,Siglo XXI" ] }
+
+14) Listar los libros en forma ascendente por nombre
+
+> db.Libro.find().sort({nombre: 1}).pretty()
+{
+        "_id" : ObjectId("64ed083ed5961d0b5ec3d679"),
+        "nombre" : "Aprenda python",
+        "autor" : "Mario Molina",
+        "editoriales" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d67f"),
+        "nombre" : "Aprendiendo Mongo",
+        "autor" : "Andres",
+        "editoriales" : [
+                "Sena, Biblioteca"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67b"),
+        "nombre" : "Dummies Android",
+        "autor" : "Julian Lujan",
+        "editor" : [
+                "Planeta,Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67d"),
+        "nombre" : "Java",
+        "autor" : "Joyanes",
+        "editor" : "[Planeta]"
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67a"),
+        "nombre" : "Java en 10 minutos",
+        "autor" : "Barros Sergios",
+        "editoriales" : [
+                "Planeta,Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d681"),
+        "nombre" : "Js para novatos",
+        "autor" : "Javier Lozada",
+        "editor" : [
+                "Semilleros2"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d680"),
+        "nombre" : "Mi primer Discord",
+        "autor" : "Wilman Rodriguez",
+        "editor" : [
+                "Libros cali"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67c"),
+        "nombre" : "Uml",
+        "autor" : "Gosh",
+        "editor" : [
+                "Planeta"
+        ]
+}
+
+15)Listar los libros en forma descendente por editorial
+
+> db.Libro.find().sort({editor:-1 }).pretty()
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67d"),
+        "nombre" : "Java",
+        "autor" : "Joyanes",
+        "editor" : "[Planeta]"
+}
+{
+        "_id" : ObjectId("64ed1700d5961d0b5ec3d682"),
+        "nombre" : "Aprendiendo Mongo",
+        "autor" : "Andres",
+        "editor" : [
+                "Sena, Biblioteca"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d681"),
+        "nombre" : "Js para novatos",
+        "autor" : "Javier Lozada",
+        "editor" : [
+                "Semilleros2"
+        ]
+}
+{
+        "_id" : ObjectId("64ed1700d5961d0b5ec3d684"),
+        "nombre" : "Js para novatos",
+        "autor" : "Javier Lozada",
+        "editor" : [
+                "Semilleros2"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67b"),
+        "nombre" : "Dummies Android",
+        "autor" : "Julian Lujan",
+        "editor" : [
+                "Planeta,Siglo XXI"
+        ]
+}
+{
+        "_id" : ObjectId("64ed09f8d5961d0b5ec3d67c"),
+        "nombre" : "Uml",
+        "autor" : "Gosh",
+        "editor" : [
+                "Planeta"
+        ]
+}
+{
+        "_id" : ObjectId("64ed0b44d5961d0b5ec3d680"),
+        "nombre" : "Mi primer Discord",
+        "autor" : "Wilman Rodriguez",
+        "editor" : [
+                "Libros cali"
+        ]
+}
+{
+        "_id" : ObjectId("64ed1700d5961d0b5ec3d683"),
+        "nombre" : "Mi primer Discord",
+        "autor" : "Wilman Rodriguez",
+        "editor" : [
+                "Libros cali"
+        ]
+}
+
+16) Crear una nueva coleccion llamada ciudades
+
+> db.createCollection("ciudades")
+{ "ok" : 1 }
+
+17) insertar 3 registros con el nombre de la ciudad y su codigo
+
+> db.ciudades.insertMany([{"nombre": "california", "codigo": "BLK182"},{"nombre": "Rancagua", "codigo": "CUM41"},{"nombre": "Torremolinos", "codigo": "SEX69"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64ed19c8d5961d0b5ec3d685"),
+                ObjectId("64ed19c8d5961d0b5ec3d686"),
+                ObjectId("64ed19c8d5961d0b5ec3d687")
+        ]
+}
+
+18) Eliminar la coleccion "ciudades"
+
+> db.ciudades.drop()
+true
+
+> show collections
+Libro
