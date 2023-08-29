@@ -1,0 +1,383 @@
+1) CREAR UNA BASE DE DATOS CON EL NOMBRE “DB_MOVIES”
+> use DB_MOVIES
+switched to db DB_MOVIES
+
+2) CREAR UNA COLECCIÓN CON EL NOMBRE “MOVIES”
+> db.createCollection("MOVIES")
+{ "ok" : 1 }
+> show collections
+MOVIES
+
+3) INSERTAR LOS SIGUIENTES DOCUMENTOS:
+> db.MOVIES.insertMany([{"title": "Fight Club", "writer": "Chuck Palahniuk", "year": 1999, "sinopsis": "Lucha", "actors": ["Brad Piit", "Edward Norton"]}, {"title": "Pulp Fiction", "writer": "Quentin Tarantino", "year": 1994, "sinopsis": "Lucha", "actors": ["Jhon Travolta", "Uma Thurman"]}, {"title": "Inglorius Basterds", "writer": "Quentin Tarantino", "year": 2009, "sinopsis": "Lucha", "actors": ["Brad  Pitt", "Diane Kruger","Eli Roth"]}, {"title": "The Hobbit: An Unexpected Journey", "writer": "J.R.R. Tolkein", "year": 2012, "sinopsis": "Lucha", "franchise": "The Hobbit" }, {"title": "The Hobbit: The Desolation of Smaug", "writer": "J.R.R. Tolkein", "year": 2013, "sinopsis": "Lucha", "franchise": "The Hobbit" }, {"title": "The Hobbit: The Battle of the Five Armies", "writer": "J.R.R. Tolkein"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64ed205dd5961d0b5ec3d68b"),
+                ObjectId("64ed205dd5961d0b5ec3d68c"),
+                ObjectId("64ed205dd5961d0b5ec3d68d"),
+                ObjectId("64ed205dd5961d0b5ec3d68e"),
+                ObjectId("64ed205dd5961d0b5ec3d68f"),
+                ObjectId("64ed205dd5961d0b5ec3d690")
+        ]
+}
+
+/////////////////////////////////////////////////////
+
+> db.MOVIES.find().pretty()
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68b"),
+        "title" : "Fight Club",
+        "writer" : "Chuck Palahniuk",
+        "year" : 1999,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad Piit",
+                "Edward Norton"
+        ]
+}
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68c"),
+        "title" : "Pulp Fiction",
+        "writer" : "Quentin Tarantino",
+        "year" : 1994,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Jhon Travolta",
+                "Uma Thurman"
+        ]
+}
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68d"),
+        "title" : "Inglorius Basterds",
+        "writer" : "Quentin Tarantino",
+        "year" : 2009,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad  Pitt",
+                "Diane Kruger",
+                "Eli Roth"
+        ]
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d691"),
+        "title" : "The Hobbit: An Unexpected Journey",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "sinopsis" : "Lucha",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d692"),
+        "title" : "The Hobbit: The Desolation of Smaug",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2013,
+        "sinopsis" : "Lucha",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d693"),
+        "title" : "The Hobbit: The Battle of the Five Armies",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "franchise" : "The Hobbit",
+        "synopsis" : "Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness."
+}
+
+4) REALIZAR LAS SIGUIENTES BUSQUEDAS
+
+• Obtener todos los documentos
+> db.MOVIES.find().pretty()
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68b"),
+        "title" : "Fight Club",
+        "writer" : "Chuck Palahniuk",
+        "year" : 1999,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad Piit",
+                "Edward Norton"
+        ]
+}
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68c"),
+        "title" : "Pulp Fiction",
+        "writer" : "Quentin Tarantino",
+        "year" : 1994,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Jhon Travolta",
+                "Uma Thurman"
+        ]
+}
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68d"),
+        "title" : "Inglorius Basterds",
+        "writer" : "Quentin Tarantino",
+        "year" : 2009,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad  Pitt",
+                "Diane Kruger",
+                "Eli Roth"
+        ]
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d691"),
+        "title" : "The Hobbit: An Unexpected Journey",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "sinopsis" : "Lucha",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d692"),
+        "title" : "The Hobbit: The Desolation of Smaug",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2013,
+        "sinopsis" : "Lucha",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d693"),
+        "title" : "The Hobbit: The Battle of the Five Armies",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "franchise" : "The Hobbit",
+        "synopsis" : "Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness."
+}
+
+
+• Obtener documentos con writer igual a "Quentin Tarantino"
+> db.MOVIES.find({writer: "Quentin Tarantino"}).pretty()
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68c"),
+        "title" : "Pulp Fiction",
+        "writer" : "Quentin Tarantino",
+        "year" : 1994,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Jhon Travolta",
+                "Uma Thurman"
+        ]
+}
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68d"),
+        "title" : "Inglorius Basterds",
+        "writer" : "Quentin Tarantino",
+        "year" : 2009,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad  Pitt",
+                "Diane Kruger",
+                "Eli Roth"
+        ]
+}
+
+• Obtener documentos con actors que incluyan a "Brad Pitt"
+
+> db.MOVIES.find({$or: [{actors: "Brad  Pitt"}, {actors: "Brad Piit"}]}).pretty()
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68b"),
+        "title" : "Fight Club",
+        "writer" : "Chuck Palahniuk",
+        "year" : 1999,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad Piit",
+                "Edward Norton"
+        ]
+}
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68d"),
+        "title" : "Inglorius Basterds",
+        "writer" : "Quentin Tarantino",
+        "year" : 2009,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad  Pitt",
+                "Diane Kruger",
+                "Eli Roth"
+        ]
+}
+
+• Obtener documentos con franchise igual a "The Hobbit"
+> db.MOVIES.find({franchise: "The Hobbit"}).pretty()
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d691"),
+        "title" : "The Hobbit: An Unexpected Journey",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "sinopsis" : "Lucha",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d692"),
+        "title" : "The Hobbit: The Desolation of Smaug",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2013,
+        "sinopsis" : "Lucha",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d693"),
+        "title" : "The Hobbit: The Battle of the Five Armies",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "franchise" : "The Hobbit",
+        "synopsis" : "Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness."
+}
+
+• Obtener todas las películas de los 90s.
+> db.MOVIES.find({year: {$gte:1990,$lte: 1999}}).pretty()
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68b"),
+        "title" : "Fight Club",
+        "writer" : "Chuck Palahniuk",
+        "year" : 1999,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad Piit",
+                "Edward Norton"
+        ]
+}
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68c"),
+        "title" : "Pulp Fiction",
+        "writer" : "Quentin Tarantino",
+        "year" : 1994,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Jhon Travolta",
+                "Uma Thurman"
+        ]
+}
+
+• Obtener las películas estrenadas entre el año 2000 y 2010. 
+
+> db.MOVIES.find({year: {$gte:2000,$lte: 2010}}).pretty()
+{
+        "_id" : ObjectId("64ed205dd5961d0b5ec3d68d"),
+        "title" : "Inglorius Basterds",
+        "writer" : "Quentin Tarantino",
+        "year" : 2009,
+        "sinopsis" : "Lucha",
+        "actors" : [
+                "Brad  Pitt",
+                "Diane Kruger",
+                "Eli Roth"
+        ]
+}
+
+Por texto:
+• Encontrar las películas que en la sinopsis contengan la palabra "Bilbo"
+
+> db.MOVIES.find({$or: [{sinopsis: /Bilbo/}, {synopsis: /Bilbo/}]}).pretty()
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d691"),
+        "title" : "The Hobbit: An Unexpected Journey",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "sinopsis" : "A reluctant hobbit,Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d692"),
+        "title" : "The Hobbit: The Desolation of Smaug",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2013,
+        "sinopsis" : "The dwarves,along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.",
+        "franchise" : "The Hobbit"
+}
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d693"),
+        "title" : "The Hobbit: The Battle of the Five Armies",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "franchise" : "The Hobbit",
+        "synopsis" : "Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness."
+}
+
+• Encontrar las películas que en la sinopsis contengan la palabra "Gandalf"
+
+> db.MOVIES.find({$or: [{sinopsis: /Gandalf/}, {synopsis: /Gandalf/}]}).pretty()
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d692"),
+        "title" : "The Hobbit: The Desolation of Smaug",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2013,
+        "sinopsis" : "The dwarves,along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.",
+        "franchise" : "The Hobbit"
+}
+
+• Encontrar las películas que en la sinopsis contengan la palabra "Bilbo" y no la
+palabra "Gandalf"
+
+> db.MOVIES.find({$and: [{sinopsis: {$regex: "Bilbo"}}, {sinopsis: {$not:{ $regex: "Gandalf"}}}]}).pretty()
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d691"),
+        "title" : "The Hobbit: An Unexpected Journey",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "sinopsis" : "A reluctant hobbit,Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.",
+        "franchise" : "The Hobbit"
+}
+
+• Encontrar las películas que en la sinopsis contengan la palabra "dwarves" ó
+"hobbit"
+
+> db.MOVIES.find({$or: [{sinopsis: {$regex: "dwarvex"}}, {sinopsis: {$regex: "hobbit"}}]}).pretty()
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d691"),
+        "title" : "The Hobbit: An Unexpected Journey",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "sinopsis" : "A reluctant hobbit,Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.",
+        "franchise" : "The Hobbit"
+}
+
+• Encontrar las películas que en la sinopsis contengan la palabra "gold" y
+"dragon"
+
+> db.MOVIES.find({$and: [{sinopsis: {$regex: "gold"}}, {sinopsis: {$regex: "dragon"}}]}).pretty()
+{
+        "_id" : ObjectId("64ed2218d5961d0b5ec3d691"),
+        "title" : "The Hobbit: An Unexpected Journey",
+        "writer" : "J.R.R. Tolkein",
+        "year" : 2012,
+        "sinopsis" : "A reluctant hobbit,Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.",
+        "franchise" : "The Hobbit"
+}
+
+5) REALIZAR LAS SIGUIENTES ACTUALIZACIONES
+• Agregar sinopsis a "The Hobbit: An Unexpected Journey" : "A reluctant hobbit,
+Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves
+to reclaim their mountain home - and the gold within it - from the dragon
+Smaug."
+
+ db.MOVIES.updateOne({title: "The Hobbit: An Unexpected Journey"},{$set: {sinopsis: "A reluctant hobbit,Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug." }} )
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+• Agregar sinopsis a "The Hobbit: The Desolation of Smaug" : "The dwarves,
+along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim
+Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a
+mysterious and magical ring."
+
+ db.MOVIES.updateOne({title: "The Hobbit: The Desolation of Smaug"},{$set: {sinopsis: "The dwarves,along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring." }} )
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+• Agregar un actor llamado "Samuel L. Jackson" a la película "Pulp Fiction"
+
+> db.MOVIES.updateOne({title: "Pulp Fiction"},{$push: {actors: "Samuel L. Jackson"}} )
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+6) ELIMINAR
+• Eliminar la película "Pee Wee Herman's Big Adventure"
+> db.MOVIES.remove({nombre: "Pee Wee Herman's Big Adventure"})
+WriteResult({ "nRemoved" : 1 })
+
+• Eliminar la película "Avatar
+
+> db.MOVIES.remove({nombre: "avatar"})
+WriteResult({ "nRemoved" : 1 })
+

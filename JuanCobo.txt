@@ -15,54 +15,52 @@ Mundo Pokemon
 
 
 
-{	"cantidad": 2
-	"listaPokemons": [
-			{"id": 1,
-			"Nombre": "Poke Uno" 
+{
+	"cantidad": 2,
+	"listaPokemons": [{
+			"id": 1,
+			"Nombre": "Poke Uno",
 			"Especial": false,
-			"Altura": "1,72cm"
+			"Altura": "1,72cm",
 			"ValorAtaque": "32",
-			"ValorDefensa": "50"
-			"Color": "Red" },
-
-
-				{Habilidad[
+			"ValorDefensa": "50",
+			"Color": "Rojo",
+			"Habilidad": [{
+				"id": 1,
+				"Nombre Habilidad": "Acuática"
+			}],
+			"Tipo": [{
 				"Id": 1,
-				"Nombre Habilidad": "Acuática"]},
-
-										
-					{Tipo[
-					"Id": 1,
-					"NombreTipo":"Especialito"]},
-
-
-						{Movimientos[
-						"Daño": "200xp",
-						"TipoDaño": "Letal" ]},
-
-	{"id": 2,
-			"Nombre": "Poke Dos" 
+				"NombreTipo": "Especialito"
+			}],
+			"Movimientos": [{
+				"Daño": "200xp",
+				"TipoDaño": "Letal"
+			}]
+		},
+		{
+			"id": 2,
+			"Nombre": "Poke Dos",
 			"Especial": true,
-			"Altura": "1,22cm"
+			"Altura": "1,22cm",
 			"ValorAtaque": "12",
-			"ValorDefensa": "45"
-			"Color": "Blue" },
-
-
-				{Habilidad[
+			"ValorDefensa": "45",
+			"Color": "Blue",
+			"Habilidad": [{
 				"Id": 2,
-				"Nombre Habilidad": "Ignea"]},
-
-										
-					{Tipo[
-					"Id": 2,
-					"NombreTipo":"Ganador"]},
-
-
-						{Movimientos[
-						"Daño": "100xp",
-						"TipoDaño": "Demasiado Letal" ]}
-				
+				"Nombre Habilidad": "Ignea"
+			}],
+			"Tipo": [{
+				"Id": 2,
+				"NombreTipo": "Ganador"
+			}],
+			"Movimientos": [{
+				"Daño": "100xp",
+				"TipoDaño": "Demasiado Letal"
+			}]
+		}
+	]
+}
 
 
 

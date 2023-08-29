@@ -1,0 +1,41 @@
+{"cantidad":2,
+pokemones[{
+"id":01,
+"nombre":"pikachu",
+"especial":true,
+"altura":"1.20mts",
+"valor de ataque":210,
+"valor de defensa":150,
+"color":"amarillo",
+
+habilidades[{
+"id":01,
+"nombre habilidad":"rayos"}],
+
+movimientos especiales[{
+"daño":300,
+"tipo de movimiento":"patada de rayo"
+}]
+},
+
+{
+"id":02,
+"nombre":"bulbasur",
+"especial":true,
+"altura":"1.40mts",
+"valor de ataque":129,
+"valor de defensa":210,
+"color":"azul"},
+
+habilidades[{
+"id":02,
+"nombre habilidad":"tsunami"}],
+
+movimientos especiales[{
+"daño":120,
+"tipo de movimiento":"puño de agua"
+}]
+}
+
+
+]}
