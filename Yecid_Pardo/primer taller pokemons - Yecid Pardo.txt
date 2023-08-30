@@ -1,0 +1,62 @@
+    "Cantidad": 2,
+    "Pokemons":
+        [
+        {
+        "id": 1,
+        "Nombre": "Charmeleon",
+        "Es especial": "Yes",
+        "Altura": "2m",
+        "Valor de ataque": 5000,
+        "Valor de defensa": 10000,
+        "Color": "Palo de rosa",
+        "Habilidades": [
+            {
+            "id": 1,
+            "Nombre": "Golpe mano izquierda",
+            "A que tipo de pokemón le hace mas daño": "Tierra"
+            },{
+            "id": 2,
+            "Nombre": "Gruñido",
+            "A que tipo de pokemón le hace mas daño": "Aire"
+            }
+            ],
+        "Tipo":	{
+            "id": 1,
+            "Nombre": "Tierra"
+            },
+        "Movimientos especiales":{
+            "Daño": 1500,
+            "Tipo": "Fuego"
+            }
+        },
+        {
+        "id": 2,
+        "Nombre": "Picachú",
+        "Es especial": "Yes",
+        "Altura": "1.60m",
+        "Valor de ataque": 8000,
+        "Valor de defensa": 12000,
+        "Color": "Amarillo",
+        "Habilidades":[
+            {
+            "id": 1,
+            "Nombre": "Grito",
+            "A que tipo de pokemón le hace mas daño": "Aire"
+            },{
+            "id": 2,
+            "Nombre": "Rayo laser",
+            "A que tipo de pokemón le hace mas daño": "Tierra"
+            }
+            ],
+        "Tipo":	{
+            "id": 1,
+            "Nombre": "Tierra"
+            },
+        "Movimientos especiales":{
+            "Daño": 5000,
+            "Tipo": "Fuego"
+        }
+
+        }
+    ]
+    }
