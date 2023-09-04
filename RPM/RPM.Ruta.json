@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d492a2"
+  },
+  "Punto de partida": "Quito",
+  "Punto de llegada": "Guayaquil",
+  "distancia en kilometros": 300,
+  "tipo de ruta": "asfalto"
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d492a3"
+  },
+  "Punto de partida": "Bogotá",
+  "Punto de llegada": "Medellín",
+  "distancia en kilometros": 400,
+  "tipo de ruta": "asfalto"
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d492a4"
+  },
+  "Punto de partida": "Mendoza",
+  "Punto de llegada": "Bariloche",
+  "distancia en kilometros": 800,
+  "tipo de ruta": "trocha"
+}]

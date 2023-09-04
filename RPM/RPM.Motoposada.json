@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d4929c"
+  },
+  "Nombre": "Posada Aventura",
+  "direccion": "Calle Principal #123",
+  "telefono": "555-1234",
+  "ubicacion": {
+    "latitud": 0.12345,
+    "longitud": -0.54321
+  }
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d4929d"
+  },
+  "Nombre": "Posada Ruta 66",
+  "direccion": "Avenida Secundaria #456",
+  "telefono": "555-9876",
+  "ubicacion": {
+    "latitud": 0.54321,
+    "longitud": -0.98765
+  }
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d4929e"
+  },
+  "Nombre": "Posada Oasis",
+  "direccion": "Carretera Panamericana #789",
+  "telefono": "555-5678",
+  "ubicacion": {
+    "latitud": 0.98765,
+    "longitud": -0.12345
+  }
+}]

@@ -1,0 +1,71 @@
+{"Cristian Narvaez"}
+
+{
+	"cantidad": 2,
+	"lista":[
+			{
+				"id": "01",
+				"nombre": "Mega Charizard X",
+				"especial": true,
+				"altura": "1,7m",
+				"ataque": "700 pts",
+				"defensa": "500 pts",
+				"habilidades": [{
+							"id": "01",
+							"nombre": "ser negro",
+							"mas daño": "jigglypuff"
+						}],
+				"tipo":[{
+						"id":"01",
+						"nombre": "Fuego"
+					},
+					{	"id": "02",
+						"nombre": "Volador"
+					}],
+	
+				"movimientos especiales":[{
+									"la patada del papu": {
+													"daño": "777pts",
+													"tipo": "que"
+													}						
+								}]
+			},
+			{
+
+				"id": "02",
+				"nombre": "Gyarados",
+				"especial": true,
+				"altura": "6,5m",
+				"ataque": "600 pts",
+				"defensa": "800 pts",
+				"habilidades": [{
+							"id": "01",
+							"nombre": "jaja te mie",
+							"mas daño": "koalamon"
+						}],
+				"tipo":[{
+						"id":"03",
+						"nombre": "Agua"
+					},
+					{	"id": "02",
+						"nombre": "Volador"
+					}],
+	
+				"movimientos especiales":[{
+									"bien aletoso": {
+													"daño": "13pts",
+													"tipo": "nea"
+													}						
+								}]
+			}
+]}
+
+
+
+
+
+
+
+			
+			
+	

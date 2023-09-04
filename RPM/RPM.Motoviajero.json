@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d49299"
+  },
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "cedula": "123456789",
+  "edad": 30,
+  "nacionalidad": "Ecuador",
+  "celular": "0987654321"
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d4929a"
+  },
+  "nombre": "María",
+  "apellido": "González",
+  "cedula": "987654321",
+  "edad": 25,
+  "nacionalidad": "Colombia",
+  "celular": "0999888777"
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d4929b"
+  },
+  "nombre": "Carlos",
+  "apellido": "López",
+  "cedula": "555555555",
+  "edad": 40,
+  "nacionalidad": "Argentina",
+  "celular": "0777666555"
+}]

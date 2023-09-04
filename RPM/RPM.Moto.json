@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d4929f"
+  },
+  "Marca": "Honda",
+  "Nombre": "CBR 1000",
+  "Placa": "ABC123",
+  "Fecha Vencimiento Seguro": "2023-12-31",
+  "Cilindraje": 1000
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d492a0"
+  },
+  "Marca": "Yamaha",
+  "Nombre": "MT-07",
+  "Placa": "XYZ789",
+  "Fecha Vencimiento Seguro": "2023-11-30",
+  "Cilindraje": 700
+},
+{
+  "_id": {
+    "$oid": "64f654b4fbb76cc1a4d492a1"
+  },
+  "Marca": "Kawasaki",
+  "Nombre": "Ninja 400",
+  "Placa": "LMN456",
+  "Fecha Vencimiento Seguro": "2023-10-15",
+  "Cilindraje": 400
+}]
