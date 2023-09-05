@@ -1,0 +1,817 @@
+> db.Clientes.insertMany([
+...   {
+...     "Nombre": "Ana García",
+...     "Ciudad": "Buenos Aires",
+...     "Tipo Cuenta": "Ahorro",
+...     "Numero de Cuenta": "1122334455",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-16",
+...         "Monto": 150
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-09-17",
+...         "Monto": -75
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-09-25",
+...         "Monto": 50
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Juan Pérez",
+...     "Ciudad": "Santiago",
+...     "Tipo Cuenta": "Corriente",
+...     "Numero de Cuenta": "2233445566",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-18",
+...         "Monto": 300
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-09-19",
+...         "Monto": -50
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-09-26",
+...         "Monto": 7500
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "María Rodríguez",
+...     "Ciudad": "Ciudad de México",
+...     "Tipo Cuenta": "Ahorro",
+...     "Numero de Cuenta": "3344556677",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-20",
+...         "Monto": 200
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-09-21",
+...         "Monto": -100
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-09-27",
+...         "Monto": 3000
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Carlos López",
+...     "Ciudad": "Madrid",
+...     "Tipo Cuenta": "Corriente",
+...     "Numero de Cuenta": "4455667788",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-22",
+...         "Monto": 5000
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-09-23",
+...         "Monto": -30
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-09-28",
+...         "Monto": 20
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Laura Martínez",
+...     "Ciudad": "Bogotá",
+...     "Tipo Cuenta": "Ahorro",
+...     "Numero de Cuenta": "5566778899",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-24",
+...         "Monto": 100
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-09-25",
+...         "Monto": -25
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-09-29",
+...         "Monto": 15000
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Pedro González",
+...     "Ciudad": "Lima",
+...     "Tipo Cuenta": "Corriente",
+...     "Numero de Cuenta": "6677889900",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-26",
+...         "Monto": 75
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-09-27",
+...         "Monto": -4000
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-09-30",
+...         "Monto": 1000
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Isabel Díaz",
+...     "Ciudad": "Caracas",
+...     "Tipo Cuenta": "Ahorro",
+...     "Numero de Cuenta": "7788990011",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-28",
+...         "Monto": 200
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-09-29",
+...         "Monto": -6000
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-10-01",
+...         "Monto": 4000
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Sergio Ramírez",
+...     "Ciudad": "São Paulo",
+...     "Tipo Cuenta": "Corriente",
+...     "Numero de Cuenta": "8899001122",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-09-30",
+...         "Monto": 9000
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-10-01",
+...         "Monto": -100
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-10-02",
+...         "Monto": 6000
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Paola Herrera",
+...     "Ciudad": "Buenos Aires",
+...     "Tipo Cuenta": "Ahorro",
+...     "Numero de Cuenta": "9900112233",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-10-02",
+...         "Monto": 120
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-10-03",
+...         "Monto": -8000
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-10-04",
+...         "Monto": 4000
+...       }
+...     ]
+...   },
+...   {
+...     "Nombre": "Luis Castro",
+...     "Ciudad": "Ciudad de México",
+...     "Tipo Cuenta": "Corriente",
+...     "Numero de Cuenta": "0011223344",
+...     "Movimientos": [
+...       {
+...         "Codigo de Movimiento": "001",
+...         "Fecha": "2023-10-04",
+...         "Monto": 600
+...       },
+...       {
+...         "Codigo de Movimiento": "002",
+...         "Fecha": "2023-10-05",
+...         "Monto": -2000
+...       },
+...       {
+...         "Codigo de Movimiento": "003",
+...         "Fecha": "2023-10-06",
+...         "Monto": 2500
+...       }
+...     ]
+...   }
+... ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64f631c4c11be0e606dd2987"),
+                ObjectId("64f631c4c11be0e606dd2988"),
+                ObjectId("64f631c4c11be0e606dd2989"),
+                ObjectId("64f631c4c11be0e606dd298a"),
+                ObjectId("64f631c4c11be0e606dd298b"),
+                ObjectId("64f631c4c11be0e606dd298c"),
+                ObjectId("64f631c4c11be0e606dd298d"),
+                ObjectId("64f631c4c11be0e606dd298e"),
+                ObjectId("64f631c4c11be0e606dd298f"),
+                ObjectId("64f631c4c11be0e606dd2990")
+        ]
+}
+>
+-------------------------------------------------------------------------------------------------
+
+Buscar todos los clientes que tengan una cuenta de tipo de ahorros.
+> db.Clientes.find().pretty({"Tipo Cuenta": "Ahorro"})
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2987"),
+        "Nombre" : "Ana García",
+        "Ciudad" : "Buenos Aires",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "1122334455",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-16",
+                        "Monto" : 150
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-17",
+                        "Monto" : -75
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-25",
+                        "Monto" : 50
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2988"),
+        "Nombre" : "Juan Pérez",
+        "Ciudad" : "Santiago",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "2233445566",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-18",
+                        "Monto" : 300
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-19",
+                        "Monto" : -50
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-26",
+                        "Monto" : 7500
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2989"),
+        "Nombre" : "María Rodríguez",
+        "Ciudad" : "Ciudad de México",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "3344556677",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-20",
+                        "Monto" : 200
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-21",
+                        "Monto" : -100
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-27",
+                        "Monto" : 3000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298a"),
+        "Nombre" : "Carlos López",
+        "Ciudad" : "Madrid",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "4455667788",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-22",
+                        "Monto" : 5000
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-23",
+                        "Monto" : -30
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-28",
+                        "Monto" : 20
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298b"),
+        "Nombre" : "Laura Martínez",
+        "Ciudad" : "Bogotá",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "5566778899",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-24",
+                        "Monto" : 100
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-25",
+                        "Monto" : -25
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-29",
+                        "Monto" : 15000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298c"),
+        "Nombre" : "Pedro González",
+        "Ciudad" : "Lima",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "6677889900",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-26",
+                        "Monto" : 75
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-27",
+                        "Monto" : -4000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-30",
+                        "Monto" : 1000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298d"),
+        "Nombre" : "Isabel Díaz",
+        "Ciudad" : "Caracas",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "7788990011",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-28",
+                        "Monto" : 200
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-29",
+                        "Monto" : -6000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-01",
+                        "Monto" : 4000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298e"),
+        "Nombre" : "Sergio Ramírez",
+        "Ciudad" : "São Paulo",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "8899001122",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-30",
+                        "Monto" : 9000
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-10-01",
+                        "Monto" : -100
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-02",
+                        "Monto" : 6000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298f"),
+        "Nombre" : "Paola Herrera",
+        "Ciudad" : "Buenos Aires",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "9900112233",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-10-02",
+                        "Monto" : 120
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-10-03",
+                        "Monto" : -8000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-04",
+                        "Monto" : 4000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2990"),
+        "Nombre" : "Luis Castro",
+        "Ciudad" : "Ciudad de México",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "0011223344",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-10-04",
+                        "Monto" : 600
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-10-05",
+                        "Monto" : -2000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-06",
+                        "Monto" : 2500
+                }
+        ]
+}
+>
+
+---------------------------------------------------------------------------------------------------
+Buscar todos los clientes que tengan una cuenta de tipo de corriente
+> db.Clientes.find().pretty({"Tipo Cuenta": "Corriente"})
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2987"),
+        "Nombre" : "Ana García",
+        "Ciudad" : "Buenos Aires",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "1122334455",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-16",
+                        "Monto" : 150
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-17",
+                        "Monto" : -75
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-25",
+                        "Monto" : 50
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2988"),
+        "Nombre" : "Juan Pérez",
+        "Ciudad" : "Santiago",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "2233445566",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-18",
+                        "Monto" : 300
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-19",
+                        "Monto" : -50
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-26",
+                        "Monto" : 7500
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2989"),
+        "Nombre" : "María Rodríguez",
+        "Ciudad" : "Ciudad de México",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "3344556677",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-20",
+                        "Monto" : 200
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-21",
+                        "Monto" : -100
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-27",
+                        "Monto" : 3000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298a"),
+        "Nombre" : "Carlos López",
+        "Ciudad" : "Madrid",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "4455667788",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-22",
+                        "Monto" : 5000
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-23",
+                        "Monto" : -30
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-28",
+                        "Monto" : 20
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298b"),
+        "Nombre" : "Laura Martínez",
+        "Ciudad" : "Bogotá",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "5566778899",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-24",
+                        "Monto" : 100
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-25",
+                        "Monto" : -25
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-29",
+                        "Monto" : 15000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298c"),
+        "Nombre" : "Pedro González",
+        "Ciudad" : "Lima",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "6677889900",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-26",
+                        "Monto" : 75
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-27",
+                        "Monto" : -4000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-30",
+                        "Monto" : 1000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298d"),
+        "Nombre" : "Isabel Díaz",
+        "Ciudad" : "Caracas",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "7788990011",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-28",
+                        "Monto" : 200
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-29",
+                        "Monto" : -6000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-01",
+                        "Monto" : 4000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298e"),
+        "Nombre" : "Sergio Ramírez",
+        "Ciudad" : "São Paulo",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "8899001122",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-30",
+                        "Monto" : 9000
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-10-01",
+                        "Monto" : -100
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-02",
+                        "Monto" : 6000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298f"),
+        "Nombre" : "Paola Herrera",
+        "Ciudad" : "Buenos Aires",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "9900112233",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-10-02",
+                        "Monto" : 120
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-10-03",
+                        "Monto" : -8000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-04",
+                        "Monto" : 4000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2990"),
+        "Nombre" : "Luis Castro",
+        "Ciudad" : "Ciudad de México",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "0011223344",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-10-04",
+                        "Monto" : 600
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-10-05",
+                        "Monto" : -2000
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-06",
+                        "Monto" : 2500
+                }
+        ]
+}
+
+------------------------------------------------------------------------------------------
+Buscar los clientes que han realizado un monto superior a 5000
+
+> db.Clientes.find({"Movimientos.Monto": {"$gt": 5000}}).pretty()
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd2988"),
+        "Nombre" : "Juan Pérez",
+        "Ciudad" : "Santiago",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "2233445566",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-18",
+                        "Monto" : 300
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-19",
+                        "Monto" : -50
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-26",
+                        "Monto" : 7500
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298b"),
+        "Nombre" : "Laura Martínez",
+        "Ciudad" : "Bogotá",
+        "Tipo Cuenta" : "Ahorro",
+        "Numero de Cuenta" : "5566778899",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-24",
+                        "Monto" : 100
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-09-25",
+                        "Monto" : -25
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-09-29",
+                        "Monto" : 15000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("64f631c4c11be0e606dd298e"),
+        "Nombre" : "Sergio Ramírez",
+        "Ciudad" : "São Paulo",
+        "Tipo Cuenta" : "Corriente",
+        "Numero de Cuenta" : "8899001122",
+        "Movimientos" : [
+                {
+                        "Codigo de Movimiento" : "001",
+                        "Fecha" : "2023-09-30",
+                        "Monto" : 9000
+                },
+                {
+                        "Codigo de Movimiento" : "002",
+                        "Fecha" : "2023-10-01",
+                        "Monto" : -100
+                },
+                {
+                        "Codigo de Movimiento" : "003",
+                        "Fecha" : "2023-10-02",
+                        "Monto" : 6000
+                }
+        ]
+}
+>
+
+
